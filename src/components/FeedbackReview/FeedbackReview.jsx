@@ -11,7 +11,7 @@ import { HashRouter as Router, Route, Link, useHistory} from 'react-router-dom';
 function FeedbackReview() {
     const history = useHistory(); 
 
-    const comment = useSelector(state => state.commentReducer);
+    const comments = useSelector(state => state.commentReducer);
 
     const feeling = useSelector(state => state.feelingReducer);
     const support = useSelector(state => state.supportReducer);
@@ -20,7 +20,7 @@ function FeedbackReview() {
 
     const feedback = {
         feeling:  feeling ,
-        comments:  comment ,
+        comments:  comments ,
         support:  support ,
         understanding: understanding 
     }
@@ -29,7 +29,7 @@ function FeedbackReview() {
 Axios.post('/feedback',feedback )
 
 .then (response => {
-    history.push('/thankyou')
+    history.push('/thanks')
 }).catch(error =>{
     console.log('error in post', error);
 });
@@ -41,7 +41,7 @@ Axios.post('/feedback',feedback )
 <div> Feeling: {feeling}</div>
 <div> Understanding: {understanding}</div>
 <div>Support: {support}</div>
-<div> Comments: {support}</div>
+<div> Comments: {comments}</div>
 <button  type = "submit" onClick= {handleSubmit}>Submit</button>
 
 

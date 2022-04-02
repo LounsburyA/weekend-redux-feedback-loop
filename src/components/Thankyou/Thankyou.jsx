@@ -1,19 +1,24 @@
 
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
-const history = useHistory(); 
+function Thankyou() {
+  
+    const history = useHistory();
+    const handleSubmit = (event)=>{
+        history.push('/')
+    }
 
-function Thankyou(){
-    console.log('in thankyou');
-   
-    history.push('/feeling');
-    return(
+
+return (
 <>
-<h1>Thankyou for your feedback</h1>
-<button onClick = {Thankyou}>Complete</button>
 
+<div>
+    <h1>Thank You for your feedback</h1>
+<button onClick ={handleSubmit} type= "submit">Complete</button>
+
+</div>
 </>
-    )
+)
 }
+
 export default Thankyou;

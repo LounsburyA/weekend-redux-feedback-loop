@@ -28,7 +28,7 @@ function App() {
           <Route path = '/support'><SupportForm/></Route>
           <Route path = '/understanding'><UnderstandingForm/></Route>
           <Route path = '/review'><FeedbackReview/></Route>
-          <Route path = '/thankyou'><Thankyou/></Route>
+          <Route path = '/thanks'><Thankyou/></Route>
         </div>
       </Router>
     </div>
