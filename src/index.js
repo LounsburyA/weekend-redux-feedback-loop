@@ -10,14 +10,7 @@ import { Provider } from 'react-redux';
 
 
 
-const storeInstance = createStore(combineReducers({
-    commentReducer,
-    feelingReducer,
-    supportReducer,
-    understandingReducer
-}),
-applyMiddleware(logger),
-);
+
 
 const commentReducer =(state = '', action) =>{
 
@@ -49,7 +42,14 @@ const understandingReducer =(state = 0, action) =>{
 }
 
 
-
+const storeInstance = createStore(combineReducers({
+    commentReducer,
+    feelingReducer,
+    supportReducer,
+    understandingReducer
+}),
+applyMiddleware(logger),
+);
 
 
 ReactDOM.render(

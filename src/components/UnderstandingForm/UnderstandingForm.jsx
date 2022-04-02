@@ -2,11 +2,12 @@ import { useState } from 'react';
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 function UnderstandingForm() {
     const dispatch = useDispatch();
-    const [number, setNum] = useState('');
-
+    const [number, setNum] = useState(0);
+  
     const history = useHistory(); 
 
     console.log('in feeling form');

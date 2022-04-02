@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 
 function FeelingForm() {
     const dispatch = useDispatch();
-    const [number, setNum] = useState('');
+    const [number, setNum] = useState(0);
     const history = useHistory();  // moves to destination
     //console.log('in feeling form');
     const handleSubmit = event => {

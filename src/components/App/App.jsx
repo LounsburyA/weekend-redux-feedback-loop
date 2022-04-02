@@ -8,6 +8,7 @@ import CommentForm from '../CommentForm/CommentForm';
 import SupportForm from '../SupportForm/SupportForm';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
+import Thankyou from '../Thankyou/Thankyou';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path = '/support'><SupportForm/></Route>
           <Route path = '/understanding'><UnderstandingForm/></Route>
           <Route path = '/review'><FeedbackReview/></Route>
+          <Route path = '/thankyou'><Thankyou/></Route>
         </div>
       </Router>
     </div>

@@ -7,11 +7,11 @@ function SupportForm() {
 
     const dispatch = useDispatch();
 
-    const [number, setNum] = useState('');
+    const [number, setNum] = useState(0);
     const history = useHistory();  
     //console.log('in support form');
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         dispatch({ type: 'ADD_SUPPORT', payload: number })
 
