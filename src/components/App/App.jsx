@@ -13,7 +13,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
 
-  const dispatch = useDispatch();
+ 
   return (
     <div className='App'>
       <header className='App-header'>

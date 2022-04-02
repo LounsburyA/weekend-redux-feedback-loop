@@ -11,11 +11,45 @@ import { Provider } from 'react-redux';
 
 
 const storeInstance = createStore(combineReducers({
-
-
+    commentReducer,
+    feelingReducer,
+    supportReducer,
+    understandingReducer
 }),
 applyMiddleware(logger),
 );
+
+const commentReducer =(state = '', action) =>{
+
+    if(action.type === 'ADD_COMMENT'){
+        return action.payload
+    }
+    return state
+}
+const feelingReducer =(state = 0, action) =>{
+
+    if(action.type === 'ADD_FEELING'){
+        return action.payload
+    }
+    return state
+}
+const supportReducer =(state = 0, action) =>{
+
+    if(action.type === 'ADD_SUPPORT'){
+        return action.payload
+    }
+    return state
+}
+const understandingReducer =(state = 0, action) =>{
+
+    if(action.type === 'ADD_UNDERSTANDING'){
+        return action.payload
+    }
+    return state
+}
+
+
+
 
 
 ReactDOM.render(
