@@ -1,20 +1,35 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+function CommentForm() {
+    const dispatch = useDispatch();
+    //console.log('in comment form');
 
-function CommentForm () {
+    const [comment, setComment] = useState('');
+    const handleSubmit = event => {
+        event.preventDefault();
+        dispatch({ type: 'ADD_COMMENT', payload: comment })
+    }
 
-    console.log('in comment form');
-    return(
-<>
-<h2>Any comments you would like to leave?</h2>
-<label htmlFor="comments">Comments</label>
 
-<textarea id="comments" name="comments"
-          rows="5" cols="33">
-Here is some place holder text and stuff.
-</textarea>
+    return (
+        <>
+            <h2>Any comments you would like to leave?</h2>
+            <section>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        size={75}
+                        required
+                        value={comment}
+                        onChange={(event) => setComment(event.target.value)}
+                    />
+                    <button type="submit">submit</button>
 
-</>
+
+                </form>
+            </section>
+        </>
 
     )
 }
