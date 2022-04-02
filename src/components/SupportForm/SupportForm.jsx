@@ -1,14 +1,21 @@
 import { useState } from 'react';
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 
 function SupportForm() {
+
     const dispatch = useDispatch();
+
     const [number, setNum] = useState('');
-    console.log('in support form');
+    const history = useHistory();  
+    //console.log('in support form');
+
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({ type: 'ADD_SUPPORT', payload: number })
+
+        history.push('/comments');
     }
 
     return (

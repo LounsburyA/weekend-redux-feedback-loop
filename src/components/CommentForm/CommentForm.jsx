@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
+
+import { useHistory } from 'react-router-dom'
+
 function CommentForm() {
     const dispatch = useDispatch();
     //console.log('in comment form');
-
-    const [comment, setComment] = useState('');
+    const history = useHistory();  
+    const [comment, setComment] = useState('');// can set the comments from event target value
+    
     const handleSubmit = event => {
         event.preventDefault();
         dispatch({ type: 'ADD_COMMENT', payload: comment })
+
+        history.push('/review');
     }
 
 
