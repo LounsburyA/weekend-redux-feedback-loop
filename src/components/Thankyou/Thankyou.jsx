@@ -12,7 +12,7 @@ function Thankyou() {
         <>
 
             <div>
-                <h1>Thank You for your feedback</h1>
+                <h1>Thank you for your feedback</h1>
                 <button onClick={handleSubmit} type="submit">Complete</button>
 
             </div>
