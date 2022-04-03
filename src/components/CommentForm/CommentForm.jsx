@@ -32,7 +32,7 @@ function CommentForm() {
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}
                     />
-                    <button type="submit">submit</button>
+                    <button type="submit">Next</button>
 
 
                 </form>

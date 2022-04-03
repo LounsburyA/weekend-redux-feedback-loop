@@ -40,7 +40,7 @@ function FeedbackReview() {
                 <div> Understanding: {understanding}</div>
                 <div>Support: {support}</div>
                 <div> Comments: {comments}</div>
-                <button type="submit" onClick={handleSubmit}>Submit</button>
+                <button type="submit" onClick={handleSubmit}>Next</button>
 
 
             </div>

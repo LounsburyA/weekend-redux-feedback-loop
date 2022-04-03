@@ -30,7 +30,7 @@ function UnderstandingForm() {
                         value={number}
                         onChange={(event) => setNum(event.target.value)}
                     />
-                    <button type="submit">submit</button>
+                    <button type="submit">Next</button>
 
 
                 </form>
