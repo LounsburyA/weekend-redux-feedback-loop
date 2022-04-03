@@ -14,7 +14,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
 
- 
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -23,12 +23,12 @@ function App() {
       </header>
       <Router>
         <div>
-          <Route path= '/' exact><FeelingForm/></Route>
-          <Route path = '/comments'><CommentForm/></Route>
-          <Route path = '/support'><SupportForm/></Route>
-          <Route path = '/understanding'><UnderstandingForm/></Route>
-          <Route path = '/review'><FeedbackReview/></Route>
-          <Route path = '/thanks'><Thankyou/></Route>
+          <Route path='/' exact><FeelingForm /></Route>
+          <Route path='/comments'><CommentForm /></Route>
+          <Route path='/support'><SupportForm /></Route>
+          <Route path='/understanding'><UnderstandingForm /></Route>
+          <Route path='/review'><FeedbackReview /></Route>
+          <Route path='/thanks'><Thankyou /></Route>
         </div>
       </Router>
     </div>

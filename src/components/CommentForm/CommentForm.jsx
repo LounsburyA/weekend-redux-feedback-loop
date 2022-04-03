@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import axios from 'axios'
+
 import { useDispatch } from 'react-redux';
 
 import { useHistory } from 'react-router-dom'
 
 function CommentForm() {
+//comment needs to be empty string 
+
     const dispatch = useDispatch();
     //console.log('in comment form');
     const history = useHistory();  
@@ -14,7 +16,7 @@ function CommentForm() {
         event.preventDefault();
         dispatch({ type: 'ADD_COMMENT', payload: comment })
 
-        history.push('/review');
+        history.push('/review');// next  up review
     }
 
 
@@ -25,7 +27,7 @@ function CommentForm() {
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        size={75}
+                        size={75}  // increase text box size
                         required
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}

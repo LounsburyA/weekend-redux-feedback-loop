@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom'
 
 function SupportForm() {
-
+// same setup as feeling component
     const dispatch = useDispatch();
 
     const [number, setNum] = useState(0);
-    const history = useHistory();  
+    const history = useHistory();
     //console.log('in support form');
 
     const handleSubmit = (event) => {
